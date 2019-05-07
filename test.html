@@ -1,0 +1,33 @@
+<html>
+<head>
+	<script type="text/javascript" src="./lib/jquery/jquery-1.9.1.min.js"></script>
+   <script src="js/sea/sea.js"></script>
+  <script type="text/javascript">
+    
+  </script>
+	<script type="text/javascript">
+    window.onload=function(){
+        var ids = document.getElementById('box');
+        ids.onclick=function(){
+              seajs.use('./js/music.js',function(ex){
+                ex.show();
+            })
+        }
+        
+    }
+	</script>
+	<style type="text/css">
+     .box1{
+     	position: absolute;
+     	width:100px;
+     	height: 100px;
+     	background: red;
+     }
+	</style>
+</head>
+<body>
+	<div class="box1" id="box">
+		 
+	</div>
+</body>
+</html>

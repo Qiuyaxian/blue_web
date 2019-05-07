@@ -1,0 +1,202 @@
+@charset "utf-8";
+@import "main";
+
+
+//index页面
+
+.project{
+   	margin-bottom: 2px;
+   	.project_title{
+   		background: url(../images/home_icon.gif) no-repeat 20px 0;
+   		@extend %setTitle;
+        @include insetBorder(475px,bottom,black,34px); 
+   	}
+   	.project_Contet{
+   		padding-top: 11px;
+   		.people_img{
+            width:150px;
+   			img{
+   				width: 103px;
+   				height:66px;
+   				padding:5px;
+   				margin-left:21px;
+   				@include setBorder(#2193a5);
+   			}
+   		}
+   		.people_desp{
+   			width: 325px;
+   		}
+   		h4{
+   			font-size: 12px;
+   			line-height: 18px;
+   		}
+   		p{
+   			height:40px;
+   			font-size: 11px;
+   			line-height: 13px;
+   			overflow:hidden;
+   			text-overflow:ellipsis;
+   			margin-bottom: 3px;
+   		}
+   		.btn{
+   			width:62px;
+   			height:13px;
+   			line-height: 13px;
+            font-size: 9px;
+            text-align: center;
+            color:#53edff;
+            margin-bottom: 12px;
+   			@include setBorder(#1fa5b5);
+   		}
+        @include insetBorder(475px,top,#158da5); 
+    }
+    @include outBorder(476px,#0f7e95);
+}
+.services{
+	margin-right: 2px;
+    .services_title{
+    	background: url(../images/home_icon.gif) no-repeat 20px -68px;
+    	@extend %setTitle;
+		@include insetBorder(236px,bottom,black,34px); 
+	}
+	.services_Contet{
+		ul{
+			width:220px;
+			margin:8px 8px 8px 7px;
+			li{
+				background:#147d91;
+				margin-bottom: 1px;
+				padding: 0 20px; 
+				a{
+					width:180px;
+					overflow:hidden;
+					text-overflow:ellipsis;
+					color:#93eeff;
+					height:22px;
+					line-height: 22px;
+					font-size: 10px;
+					text-indent: 16px;
+					background:url(../images/list_icon.gif) no-repeat 2px center;
+					@extend .block;
+				}
+			}
+		}
+		@include insetBorder(236px,top,#158da5);
+	}
+	@include outBorder(236px,#0f7e95);
+}
+.quotes{
+	.quotes_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -102px;
+    	@extend %setTitle;
+		@include insetBorder(236px,bottom,black,34px);
+	}
+    .quotes_Contet{
+    	padding-top: 8px;
+        @include insetBorder(236px,top,#158da5);
+    }
+    .people_img{
+    	width:108px;
+    	img{
+    		width:72px;
+    		height:55px;
+    		padding:5px;
+    		margin-left: 12px;
+    		@include setBorder(#2193a5);
+    	}
+        
+    }
+    .people_info{
+        width:128px;
+        margin-top:3px;
+        .https{
+        	 h4{
+	        	font-size: 12px;
+	        	line-height: 12px;
+	         }
+	         a{
+                font-size: 11px;
+	        	line-height: 12px;
+	         }
+        }
+        p{
+        	height:26px;
+        	font-size: 12px;
+        	line-height: 14px;
+        	overflow:hidden;
+        	margin-top: 4px;
+        	text-overflow:ellipsis;
+        }
+        .btn{
+        	width:75px;
+        	height:14px;
+        	line-height: 14px;
+        	font-size: 8px;
+        	text-align: center;
+        	color:#53edff;
+        	margin:11px 0 12px 0;
+        	*margin:12px;             /* IE8 */
+        	margin:12px 0 12px 0\9\0;/* IE9 */
+        	@include setBorder(#1fa5b5);
+        	@extend .block;
+        }
+    }
+    @include outBorder(236px,#0f7e95);
+}
+.events{
+	margin-bottom: 2px;
+    .events_title{
+    	background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+    	@include insetBorder(240px,bottom,black,34px); 
+    }
+    .events_Content{
+        @include insetBorder(240px,top,#158da5); 
+    }
+    .scroll_list{
+        @extend %scroll_list;
+    }
+	.scrollBar{
+		height:138px;
+		.scrollBtn{
+			height:34px;
+			@extend %setscrollBtn;
+		}
+		@extend %setscrollBar;
+	}
+    @include outBorder(240px,#0f7e95);
+}
+.price{
+	box-shadow: 1px 1px 0.5px black;
+	background:url(../images/price_bg.jpg) no-repeat 0 0;
+	.price_show{
+		width:160px;
+		text-align: right;
+		h1{
+           font-size: 14px;
+           font-weight: normal;
+           margin-top:8px;
+		}
+		p{ 
+           font-size: 14px;
+		}
+		strong{
+           font-size:28px;
+           color:#00deff;
+		}
+	}
+    .price_icon{
+    	width:78px;
+    	span{
+    		padding-top: 6px;
+    		padding-left: 28px;
+    		@extend .block;
+    	}
+    }
+    @include outBorder(238px,#0f7e95,85px);
+    @include boxShadow(1px,1px,1px,#055365);
+}
+
+
+
+

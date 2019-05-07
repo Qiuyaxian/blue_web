@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "main";
+
+.policy{
+	font-size: 11px;
+	line-height: 12px;
+	color:#b8d7dd;
+	.policy_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+    	@include insetBorder(720px,bottom,black,34px); 
+	}
+   	.policy_Content{
+   		padding-left:21px;
+   		padding-right: 11px;
+   		@include insetBorder(688px,top,#158da5); 
+   	}
+   	h4{
+		margin-top:11px;
+   	}
+   	p{
+   		width:688px;
+        height:36px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+   	}
+   	.nulla{
+   		p{
+   			height:48px;
+   		}
+   	}
+   	.email_link{
+   		margin:19px 0 27px 0;
+   	}
+   	a{
+   		color:#b8d7dd;
+   	}
+   	@include outBorder(720px,#0f7e95);
+}

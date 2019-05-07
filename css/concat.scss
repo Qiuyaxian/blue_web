@@ -1,0 +1,176 @@
+@charset "utf-8";
+@import "main";
+
+.postal{
+	margin-right: 2px;
+	.postal_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+    	@include insetBorder(172px,bottom,black,34px); 
+	}
+	.postal_Content{
+		padding-left: 21px;
+		padding-bottom: 29px;
+		@include insetBorder(151px,top,#158da5); 
+	}
+	.postal_img{
+		margin-top:11px; 
+		margin-bottom: 14px;
+		*margin-bottom: 11px;
+        img{
+        	width: 103px;
+        	height:83px;
+        	padding:6px 5px;
+        	@include setBorder(#2193a5);
+        }
+	}
+	h4{
+		*font-size: 11px;
+		line-height: 13px;
+	}
+	p{
+		width:120px;
+		height:24px;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		span{
+			height:12px;
+			line-height:12px;
+			@extend .block;
+		}
+	}
+	.postal_touch{
+		font-size: 11px;
+		line-height: 12px;
+		margin-top:23px;
+		font-family: Tahoma;
+		.touch_type{
+          	width:59px;
+		}
+        .touch_number{
+			width:86px;
+        }
+	}
+	@include outBorder(172px,#0f7e95);
+}
+.departments{
+	margin-right: 2px;
+	font-family: Tahoma;
+	font-size: 11px;
+    line-height: 12px;
+	color: #b8d7dd;
+	.departments_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+    	@include insetBorder(190px,bottom,black,34px); 
+	}
+    .departments_Content{
+    	padding-left: 23px;
+		@include insetBorder(167px,top,#158da5); 
+    }
+    h4{
+    	font-size: 11px;
+    	line-height: 12px;
+    }
+    span{
+    	font-size: 11px;
+    	line-height: 12px;
+    }
+    a{
+    	*font-size: 11px;
+    	*line-height: 12px;
+    	width:150px;
+    	color: #b8d7dd;
+    	@extend .block;
+    }
+    .touch_type{
+		width:30px;
+    }
+	.touch_number{
+		width:120px;
+	}
+	.customer{
+		margin-top:9px;
+		margin-bottom:32px;
+	}
+	.risk{
+		margin-bottom:32px;
+	}
+	.network{
+		margin-bottom:30px;
+	}
+    @include outBorder(190px,#0f7e95);
+}
+
+.contact{
+	.contact_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+    	@include insetBorder(350px,bottom,black,34px); 
+	}
+	.contact_Content{
+		padding: 11px 0;
+		@include insetBorder(350px,top,#158da5); 
+	}
+	.input_type{
+		width:102px;
+		span{
+			font-size: 11px;
+			height:20px;
+			text-indent: 24px;
+			line-height: 20px;
+			margin-bottom: 10px;
+			@extend .block;
+		}
+	}
+	.input_info{
+		width:248px;
+	}
+	label{
+		margin-bottom: 10px;
+		*margin-bottom: 8px;
+		@extend .block;
+		input{
+			width:206px;
+			height:18px;
+			padding:0px 5px;
+			font-size: 12px;
+			background:white;
+			@include setBorder(#066073);
+		}
+	}
+	.last{
+		margin-bottom: 8px;
+		*margin-bottom: 6px;
+	}
+	textarea{
+		width:216px;
+		height:82px;
+		overflow:hidden;
+		resize:none;
+		@include setBorder(#066073);
+	}
+	.submit{
+        width:42px;
+        height:13px;
+        color: #53edff;
+        line-height: 13px;
+        background:#0a6d81;
+        font-size:8px;
+        margin-right: 30px;
+        @include setBorder(#1fa5b5);
+	}
+	.reset{
+		width:42px;
+        height:13px;
+        color: #53edff;
+        font-size:8px;
+        line-height: 13px;
+        margin-right: 30px;
+        background:#0a6d81;
+        @include setBorder(#1fa5b5);
+	}
+	@include outBorder(350px,#0f7e95);
+}
+
+

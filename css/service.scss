@@ -1,0 +1,172 @@
+@charset "utf-8";
+@import "main";
+
+.services_list{
+	.list_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -102px;
+    	@extend %setTitle;
+		@include insetBorder(236px,bottom,black,34px);
+	}
+    .list_Content{
+    	padding-top: 11px;
+    	padding-bottom: 6px;
+    	*padding-bottom: 7px;
+    	@include insetBorder(236px,top,#158da5);
+    }
+    .scroll_list{
+        width: 202px;
+        margin: 0 7px;
+        li{
+    	    background:#147d91;
+    	    padding:0 10px 0 22px; 
+    	    margin-bottom:1px;
+    		a{
+    			width:170px;
+    			height:22px;
+    			overflow:hidden;
+    			text-overflow:ellipsis;
+    			text-indent: 12px;
+    			line-height: 22px;
+    			color:#93eeff;
+    			background:url(../images/list_icon.gif) no-repeat left center;
+    			@extend .block;
+    		}
+    	}
+    }
+    .scrollBar{
+    	height:228px;
+    	margin-top:0px;
+    	.scrollBtn{
+    		height:33px;
+    		@extend %setscrollBtn;
+    	}
+    	@extend %setscrollBar;
+    }
+    @include outBorder(236px,#0f7e95);
+}
+.company_services{
+	font-size: 11px;
+	line-height: 12px;
+	.company_services_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -102px;
+    	@extend %setTitle;
+		@include insetBorder(480px,bottom,black,34px);
+	}
+	.company_services_Content{
+		padding: 12px 0;
+		*padding:11px 0; 
+		@include insetBorder(480px,top,#158da5);
+	}
+	ul{
+		margin-top:10px;
+		*margin-top:7px;
+		li{
+			a{
+                width:200px;
+			    height:13px;
+                line-height: 13px;
+                overflow:hidden;
+                color:#b8d7dd;
+                text-overflow:ellipsis;
+                text-indent: 12px;
+                background:url(../images/list_icon.gif) no-repeat left center;
+                @extend .block;
+			}
+		}
+	}
+	h4{
+		*font-size: 11px;
+	    *line-height: 12px;
+        margin-top: 8px;
+	}
+	p{
+	    width:108px;
+	    height:24px;
+	    overflow:hidden;
+	    margin-top:12px;
+	    text-overflow:ellipsis; 
+	    text-decoration: underline;
+	}
+	img{
+	     width:72px;
+		 height:46px;
+		 padding:5px;
+		 @include setBorder(#2193a5); 
+	}
+	.btn{
+		width:62px;
+		height:13px;
+		text-align: center;
+		line-height: 13px;
+		font-size: 8px;
+		color:#53edff;
+		margin-top:5px;
+		@include setBorder(#1fa5b5); 
+	}
+	.manage_left{
+		width:229px;
+	   	padding-left:12px;
+		border-right: 1px solid #158da5;
+	}
+	.risk_img{
+	   	width:96px;
+	}
+	.risk{
+	   	width:133px;
+	}
+	.manage_right{
+		width:218px;
+		padding-left:18px;
+		border-left: 1px solid black;
+	}
+	.market_img{
+		width:98px;
+	}
+	.market_info{
+		width:120px;
+	}	
+
+	@include outBorder(480px,#0f7e95);
+}
+
+.featured{
+	margin-top: 2px;
+	.featured_title{
+         background: url(../images/home_icon.gif) no-repeat 20px -102px;
+    	 @extend %setTitle;
+		 @include insetBorder(480px,bottom,black,34px);
+	}
+	.featured_Content{
+		padding-top: 15px;
+		padding-bottom: 8px;
+		*padding-bottom: 6px;
+         @include insetBorder(480px,top,#158da5);
+	}
+	.featured_img{
+		width:96px;
+		padding-left:12px; 
+		img{
+            width:72px;
+            height:38px;
+            padding:3px 5px;
+            @include setBorder(#2193a5); 
+		}
+	}
+    .featured_desp{
+    	width:372px;
+    	font-size: 11px;
+    	line-height: 12px; 
+    	h4{
+    		*font-size: 11px;
+	        *line-height: 12px;
+            margin-top:4px;
+    	}
+    	p{
+    		height:24px;
+    		text-decoration: underline;
+    		overflow:hidden;
+    		text-overflow:ellipsis;
+    	}
+    }
+	@include outBorder(480px,#0f7e95);
+}

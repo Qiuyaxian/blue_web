@@ -1,0 +1,246 @@
+@charset "utf-8";
+@import "main";
+
+.we{
+	margin-bottom: 2px;
+	.we_title{
+		background: url(../images/home_icon.gif) no-repeat 20px 0px;
+    	@extend %setTitle;
+		@include insetBorder(475px,bottom,black,34px); 
+	}
+	.we_Contet{
+		.ipsum{
+			width: 240px;
+			font-size: 11px;
+        	line-height: 13px;
+        	padding-left:22px; 
+			border-right: 1px solid #158da5;
+		}
+		.ipsum_list{
+			width:211px;
+			border-left: 1px solid #0f6678;
+		}
+		@include insetBorder(475px,top,#158da5);
+	}
+	.ipsum{
+        h3{
+        	margin:11px 0 12px 0;
+        	text-decoration:underline;
+        }
+        p{
+        	height:52px;
+        	overflow:hidden;
+        	text-overflow:ellipsis;
+        	margin-bottom:13px;
+        }
+	}
+	.ipsum_list{
+		ul{
+        	width:187px;
+        	margin:17px 10px 0 14px;
+        	li{
+	        	padding:0 10px; 
+	        	background:#147d91;
+	        	margin-bottom: 1px;
+	            a{
+	                  width:167px;
+	                  height:22px;
+	                  line-height: 22px;
+	                  font-size: 11px;
+	                  color:#93eeff;
+	                  overflow:hidden;
+	                  text-indent: 26px;
+	                  text-overflow:ellipsis;
+	                  background:url(../images/list_icon.gif) no-repeat 12px center;
+	                  @extend .block;
+	             }
+	        }
+	    }
+	    .btn{
+             width:62px;
+             height:13px;
+             font-size: 8px;
+             line-height: 13px;
+             color:#53edff;
+             text-align: center;
+             margin:11px 0 12px 14px;
+             @include setBorder(#1fa5b5);
+	    }
+	}
+    @include outBorder(476px,#0f7e95);
+}
+.archive{
+    margin-bottom: 2px;
+	.archive_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+	    @include insetBorder(240px,bottom,black,34px); 
+	}
+	.archive_Content{
+		padding-bottom: 8px;
+	    @include insetBorder(240px,top,#158da5); 
+	}
+    .archive_list{
+        @extend %scroll_list;
+    }
+    .scrollBar{
+    	height:83px;
+    	.scrollBtn{
+    		height:34px;
+            @extend %setscrollBtn;
+    	}
+    	@extend %setscrollBar;
+    }
+    @include outBorder(240px,#0f7e95);
+}
+.do{ 
+	margin-right: 2px;
+	.do_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+    	@include insetBorder(236px,bottom,black,34px);
+	}
+    .do_Contet{
+    	color:#b8d7dd;
+    	padding-left:22px;
+    	padding-bottom: 8px;
+    	*padding-bottom: 4px;
+    	.odio{
+    		width:194px;
+    	}
+        @include insetBorder(214px,top,#158da5); 
+    }
+    h4{
+    	font-size: 11px;
+    	line-height: 12px;
+    	margin-top: 10px;
+    }
+    p{
+    	width:184px;
+    	height:24px;
+    	font-size: 11px;
+    	overflow:hidden;
+        text-overflow:ellipsis;
+    	line-height: 12px;
+    	margin-top: 10px;
+    }
+    ul{
+    	width:184px;
+    	margin:7px 0 3px 0;
+    	padding-right:10px; 
+    	li{
+    		margin-bottom: 4px;
+    		a{
+    			width:184px;
+    			height:13px;
+    			line-height: 13px;
+    			font-size: 11px;
+    			overflow:hidden;
+    			color:#b8d7dd;
+    			text-overflow:ellipsis;
+    			text-indent: 12px;
+    			line-height: 13px;
+    			background:url(../images/list_icon.gif) no-repeat left center;
+    			@extend .block;
+    		}
+    	}
+    }
+    .scrollBar{
+    	height:88px;
+    	.scrollBtn{
+    		height:34px;
+    		@extend %setscrollBtn;
+    	}
+    	@extend %setscrollBar;
+    }
+    @include outBorder(236px,#0f7e95);
+}
+.workteam{
+	.workteam_title{
+        background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+    	@include insetBorder(235px,bottom,black,34px); 
+	}
+   	.workteam_Contet{
+   		padding-top:7px;
+   		padding-bottom: 4px;
+        @include insetBorder(235px,top,#158da5); 
+   	}
+    .workteam_img{
+    	width:113px;
+    	padding-left:12px; 
+    	img{
+    		width:88px;
+    		height:80px;
+    		padding:5px;
+    		@include setBorder(#1d8c9f);
+    	}
+    }
+    .workteam_info{
+    	font-size: 11px;
+    	line-height: 12px;
+    	h3{
+           margin-top:3px;
+    	}
+    	a{
+    		width:88px;
+    		height:24px;
+    		overflow:hidden;
+    		margin-top:11px;
+            text-overflow:ellipsis;
+            text-decoration: underline;
+    		@extend .block;
+    	}
+    }
+    @include outBorder(235px,#0f7e95);
+}
+
+.principles{
+	.principles_title{
+		background: url(../images/home_icon.gif) no-repeat 20px -34px;
+    	@extend %setTitle;
+    	@include insetBorder(240px,bottom,black,34px);
+	}
+    .principles_Contet{
+    	font-size: 11px;
+    	padding-left: 22px;
+    	padding-bottom: 6px;
+    	padding-bottom: 5px\9\0;
+    	*padding-bottom: 7px;
+    	.principles_list{
+    		width:186px;
+    		padding:11px 12px 0 0;
+    	}
+    	p{
+    		height:24px;
+    		line-height: 12px;
+    		overflow:hidden;
+    		text-overflow:ellipsis;
+    	}
+    	@include insetBorder(218px,top,#158da5); 
+    }
+    ul{
+    	li{
+    		a{
+    			width:186px;
+    			height:22px;
+                line-height: 22px;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                text-indent: 14px;
+                color:#93eeff;
+                background:url(../images/list_icon.gif) no-repeat left center;
+                @extend .block;
+    		}
+    	}
+    }
+    .scrollBar{
+    	height:88px;
+    	.scrollBtn{
+    		height:34px;
+    		@extend %setscrollBtn;
+    	}
+    	@extend %setscrollBar;
+    }
+    @include outBorder(240px,#0f7e95);
+}

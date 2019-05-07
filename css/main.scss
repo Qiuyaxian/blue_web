@@ -1,0 +1,503 @@
+@charset "utf-8";
+
+//页面背景设置
+$wrap_bg:#056477 !default;
+$wrap_width:722px !default;
+$wrap_height:745px !default;
+$wrap_padding:22px !default;
+
+
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,p,strong,span,form,input,textarea,img,em,i,b{
+	margin: 0;
+	padding: 0; 
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+em{
+	font-style: normal;
+}
+img{
+	border:none;
+}
+
+input,textarea{
+	border:none;
+}
+body{
+	font-size: 12px;
+	font-family: Arial;
+	color:white;
+	width:100%;
+	background:$wrap_bg;
+}
+.clearFix{
+	zoom:1;
+	&:after{
+		content:" ";
+		clear: both;
+		display: block;
+	}
+}
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+.absolute{
+	position: absolute;
+}
+.relative{
+	position:relative;
+}
+.block{
+    display:block;
+}
+.inline-block{
+	display:inline-block;
+}
+.outBorder{
+	border:1px solid #015060;
+}
+.insetBorder{
+	border:1px solid #117a8f;
+}
+.boxBorder{
+	border:1px solid #0f7e95;
+}
+.color{
+	color: #2395ac;
+}
+.btn-default{
+	display:inline-block;
+}
+.btn-block{
+	display:block;
+}
+
+//三角星
+
+.caret{
+	border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+	border-top: 3px solid #82b0b9;
+	border-bottom: none;
+}
+%setTitle{
+	font-size: 10px;
+   	line-height: 34px;
+   	text-indent: 46px;
+   	font-weight: normal;
+}
+@mixin setBorder($color){
+    border:1px solid $color;
+}
+//页面结构布局
+.wrap{
+   width: $wrap_width;
+   background: $wrap_bg;
+   margin: 0 auto;
+   padding:0 $wrap_padding; 
+}
+#header{
+	border-top:1px solid #dddddd;
+	margin-bottom: 4px;
+   .top{
+       height:22px;
+       margin-top:39px;
+       border-top:1px solid #117a8f;
+       border-bottom:1px solid #015060;
+       .today{
+       	   width:509px;
+       	   line-height: 22px;
+       	   font-size: 10px;
+       	   color:#2395ac;
+       	   border-right: 1px solid #015060;
+       	   @extend .inline-block;
+       }
+       .music_play{
+       	   width:212px;
+       }
+   }
+   .nav{
+       height:63px;
+       overflow:hidden;
+       border-top:1px solid #117a8f;
+       border-bottom:1px solid #21a1b7;
+       ul{
+       	    width:436px;
+       	    height:28px;
+       	    margin-top:21px;
+       	    background:#014a59;
+       }
+       h1{
+       	    width:286px;
+       	    height:26px;
+       	    margin-top:19px;
+       	    line-height: 26px;
+       }
+       .logo{       	    
+       	    line-height: 26px;
+       	    text-indent: 43px;
+            font-size: 24px;
+       	    color:#56daf5;
+       	    background:url(../images/logo.png) no-repeat 5px 0;
+       	    @extend .inline-block;
+       }     
+   }
+   //细节
+   .music_play{
+   	   span{
+   	   	   line-height: 22px;
+   	   	   @extend .inline-block;
+   	   }
+   	   .play-btn{
+            width:68px;
+            height:22px;
+            border-left: 1px solid #117a8f;
+            border-right: 1px solid #015060;
+   	   }
+   	   .play-volume{
+   	   	    width:80px;
+   	   	    height:22px;
+            border-left: 1px solid #117a8f;
+            border-right: 1px solid #015060;
+   	   }
+   	   .play-column{
+   	   	    width:59px;
+   	   	    height:22px;
+            border-left: 1px solid #117a8f;
+            @extend .relative;
+   	   }
+   }
+   .play-btn{
+	   line-height: 22px;
+   }
+   .start{
+	   width:4px;
+	   height:7px;
+	   margin:8px 0 0 18px;
+	   background: url(../images/play.gif) no-repeat 0 -14px;
+	   @extend .inline-block;
+   }
+   .stop{
+	   width:8px;
+	   height:7px;
+	   margin:8px 0 0 8px;
+	   background: url(../images/play.gif) no-repeat 0 -7px;
+	   @extend .inline-block;
+   }
+   .end{
+	   width:8px;
+	   height:7px;
+	   margin:8px 0 0 6px;
+	   background: url(../images/play.gif) no-repeat 0 0px;
+	   @extend .inline-block;
+   }
+   .volumeBar{
+	    width:60px;
+	    height:1px;
+	    background:#0c9caa;
+	    top:10px;
+	    left:10px;
+	    .volumeBtn{
+	        width:4px;
+	        height:11px;
+	        top:-5px;
+	        left:28px;
+	        background:#0c9caa;
+	        @extend .absolute;
+	    }  
+	    @extend .relative;
+	}
+	.columnBar_list{
+	    left:14px;
+	    bottom:4px;
+	    @extend .absolute;
+	}
+	.columnBar{
+	    width:3px;
+	    background:#0c9caa;
+	    bottom:0;
+	    &:nth-of-type(1){
+	        height:5px;
+	        left:0;
+	    }
+	    &:nth-of-type(2){
+	        height:9px;
+	        left:4px;
+	    }
+	    &:nth-of-type(3){
+	        height:9px;
+	        left:8px;
+	    }
+	    &:nth-of-type(4){
+	        height:3px;
+	        left:12px;
+	    }
+	    &:nth-of-type(5){
+	        height:7px;
+	        left:16px;
+	    }
+	    &:nth-of-type(6){
+	        height:11px;
+	        left:20px;
+	    }
+	    &:nth-of-type(7){
+	        height:6px;
+	        left:24px;
+	    }
+	    @extend .pull-left;
+	    @extend .absolute;
+	}
+    ul{
+   	   li{
+   	   	   margin:1px;
+       	   a{
+       	   	    width:105px;
+       	   	    height:24px;
+       	   	    text-align: center;
+       	   	    line-height: 24px;
+       	   	    color:white;
+       	   	    font-size: 8px;
+       	   	    border:1px solid #0e7d93;
+       	   	    @extend .inline-block;
+                @extend .color;
+       	   }
+       	   span{
+       	   	    left:14px;
+       	   	    top:11px;
+       	   	    @extend .absolute;
+       	   }
+       	   @extend .relative;
+       	   @extend .pull-left;
+       }
+    }
+   .logo{
+   	   	span{
+   	   	   	   font-size: 16px;
+   	   	   	   color:white;
+   	    }
+   	    em{
+     	   	   font-size: 24px;
+   	   	}
+   }
+}
+
+@mixin outBorder($width,$borderColor,$height:auto){
+	width:$width;
+	height:$height;
+    border: 1px solid $borderColor; 
+}
+@mixin insetBorder($width,$borderLoacl,$borderColor,$height:auto){
+    width:$width;
+    height:$height;
+    border-#{$borderLoacl}: 1px solid $borderColor; 
+}
+@mixin boxShadow($x,$y,$z,$color,$type:outset){
+    box-shadow: $x $y $z $type $color;
+} 
+#content{
+	padding-bottom:13px; 
+	margin-bottom: 3px;
+   .banner{
+   	   height:229px;
+   	   background:url(../images/banner_bg.gif) no-repeat -19px 0;
+   	   border-bottom:1px solid #21a1b7;
+   	   margin-bottom: 3px;
+   }
+   .banner_desp{
+   	   width:335px;
+   	   height:229px;
+   	   text-align: right;
+   	   padding-right: 26px;
+   	   background:-webkit-linear-gradient(left,none,#64b8ca);
+   	   background:-moz-linear-gradient(left,none,#64b8ca);
+   	   background:-ms-linear-gradient(left,none,#64b8ca);
+   	   background:-o-linear-gradient(left,none,#64b8ca);
+   	   background:-linear-gradient(left,none,#64b8ca);
+   	   h3{
+   	   	   font-size: 18px;
+   	   	   color:white; 
+   	   	   margin-top:40px;
+   	   	   font-weight: normal;
+   	   	   strong{
+   	   	   	   font-weight: normal;
+   	   	   	   @extend .block;
+   	   	   }
+   	   }
+   	   .line{
+   	   	   height:3px;
+   	   	   width:335px;
+   	   	   margin-top:4px;
+   	   	   margin-bottom: 14px;
+   	   	   background:-webkit-linear-gradient(left,#baebf4,#d2ebf0);
+   	   	   background:-moz-linear-gradient(left,#baebf4,#d2ebf0);
+   	   	   background:-ms-linear-gradient(left,#baebf4,#d2ebf0);
+   	   	   background:-o-linear-gradient(left,#baebf4,#d2ebf0);
+   	   	   background:-linear-gradient(left,#baebf4,#d2ebf0);
+   	   }
+   	   span{
+   	   	   background:url(../images/banner_icon.gif) no-repeat 324px -17px;
+   	   	   line-height: 15px;
+   	   	   height:15px;
+   	   	   padding-right: 17px;
+   	   	   color:#025e71;
+   	   	   @extend .block;
+   	   }
+       .banner-btn{
+       	    width:79px;
+       	    height:17px;
+       	    font-size:10px;
+       	    text-align: center;
+       	    line-height: 17px; 
+       	    color:#deffff;
+       	    margin-top:12px;
+       	    background:url(../images/banner_icon.gif) no-repeat 0 0;
+       	    @extend .pull-right;
+       }
+   }
+   .content_wrap{
+   	   
+   }
+}
+.bottom-box{
+	height:13px;
+	border:1px solid #158da5;
+	border-top:none;
+	border-shadow:inset 0 0 1px #0f6678;
+}
+#footer{
+   border-top: 1px solid #21a1b7;
+   padding-bottom: 42px;
+   .address{
+   	   height:30px;
+   	   margin-top: 3px;
+   	   line-height: 30px;
+   	   text-align: center;
+   	   background: #2190a2;
+   	   font-size: 10px;
+   	   color:#bddee3;
+   	   a{ 
+   	   	   color:#bddee3;
+   	   } 
+   }
+}
+
+%setscrollBar{
+	width:10px;
+	margin-top:8px;
+	border-left:1px solid #095d6d;
+	border-right:1px solid #095d6d;
+	border-top:1px solid #108096;
+	border-bottom:1px solid #108096;
+	@extend .relative;
+	@extend .inline-block;
+}
+%setscrollBtn{
+	width:10px;
+	left:0px;
+	top:0px;
+	background:#075767;
+    @extend .inline-block;
+    @extend .absolute;
+}
+
+%scroll_list{
+        width:220px;
+        margin-top:8px;
+        li{
+        	height:26px;
+        	overflow:hidden;
+        	text-overflow:ellipsis;
+        	margin:0 20px 11px 20px; 
+        	a{
+        		height:13px;
+        		width:180px;
+        		font-size: 11px;
+        		line-height: 13px;
+        		color:#b8d7dd;
+        		padding-left:14px; 
+        		word-break:break-all;
+        		background: url(../images/list_icon.gif) no-repeat 2px center;
+        		@extend .block;
+        	}
+        }
+}
+
+#bgMusic{
+     display: none;
+}
+
+.end{
+   width:8px;
+   height:7px;
+   margin:8px 0 0 6px;
+   background: url(../images/play.gif) no-repeat 0 0px;
+   @extend .inline-block;
+}
+.volumeBar{
+    width:60px;
+    height:1px;
+    background:#0c9caa;
+    top:10px;
+    left:10px;
+    .volumeBtn{
+        width:4px;
+        height:11px;
+        top:-5px;
+        left:28px;
+        cursor: pointer;
+        background:#0c9caa;
+        @extend .absolute;
+    }  
+    @extend .relative;
+}
+.columnBar_list{
+    left:14px;
+    bottom:4px;
+    @extend .absolute;
+}
+.columnBar{
+    width:3px;
+    background:#0c9caa;
+    bottom:0;
+    &:nth-of-type(1){
+        height:5px;
+        left:0;
+    }
+    &:nth-of-type(2){
+        height:9px;
+        left:4px;
+    }
+    &:nth-of-type(3){
+        height:9px;
+        left:8px;
+    }
+    &:nth-of-type(4){
+        height:3px;
+        left:12px;
+    }
+    &:nth-of-type(5){
+        height:7px;
+        left:16px;
+    }
+    &:nth-of-type(6){
+        height:11px;
+        left:20px;
+    }
+    &:nth-of-type(7){
+        height:6px;
+        left:24px;
+    }
+    @extend .pull-left;
+    @extend .absolute;
+}
+
+
+//进场动画
+

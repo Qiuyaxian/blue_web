@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "main";
+
+.wrap{
+	position: relative;
+}
+.content{
+	position:relative;
+}
+.content_wrap{
+	position:relative;
+}
+#index{
+	position:absolute;
+	display:block;
+}
+#about{
+	position:absolute;
+
+	display:none;
+}
+#solution{
+	position:absolute;
+
+	display:none;
+}
+#service{
+	position:absolute;
+
+	display:none;
+}
+#concat{
+	position:absolute;
+
+	display:none;
+}
